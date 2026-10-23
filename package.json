@@ -1,0 +1,32 @@
+{
+  "name": "form-workout",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host 0.0.0.0",
+    "build": "tsc -b && vite build",
+    "build:iphone-preview": "tsc -b && vite build --mode iphone-preview",
+    "preview": "vite preview --host 0.0.0.0",
+    "test": "vitest run"
+  },
+  "dependencies": {
+    "dexie": "^4.2.1",
+    "dexie-react-hooks": "^4.2.0",
+    "lucide-react": "^0.468.0",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0",
+    "zod": "^4.1.0"
+  },
+  "devDependencies": {
+    "@types/react": "^19.2.0",
+    "@types/react-dom": "^19.2.0",
+    "@vitejs/plugin-react": "^5.0.0",
+    "fake-indexeddb": "^6.2.4",
+    "sharp": "^0.35.5",
+    "typescript": "~5.9.3",
+    "vite": "^7.2.0",
+    "vite-plugin-pwa": "^1.1.0",
+    "vitest": "^5.0.5"
+  }
+}
