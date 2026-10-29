@@ -1,5 +1,15 @@
 # Verification record
 
+## GitHub Pages preparation — 29 October 2026
+
+- Added a separate GitHub Pages build under `/form-iphone-preview/`, preserving the regular and original root-hosted build modes.
+- Manifest identity, launch URL, scope, icons, HTML asset paths and offline fallback follow the project path. The build command checks these outputs before deployment.
+- 29 existing domain/repository/fixture tests passed. Device checks remain pending.
+- Public source repository: https://github.com/Ertenan/form-iphone-preview . Target HTTPS site: https://ertenan.github.io/form-iphone-preview/ . The final handoff confirms the workflow/deployment outcome.
+- GitHub Actions publishes from `main` after tests and build checks. No cloud sync or advanced training features were added.
+
+Earlier preview records below refer to the previous hosting origin and earlier builds.
+
 ## iPhone HTTPS preparation — 23 October 2026
 
 - Added a separate `iphone-preview` build with clearly labeled synthetic template/history and an always-visible test banner. The regular build remains empty on first use.

@@ -4,17 +4,18 @@ This is a synthetic-data test of the core workout loop. No programs, analytics, 
 
 ## Hosting choice and access
 
-- **Chosen: connected Sites hosting.** Dedicated owner-private HTTPS origin: https://form-iphone-lab-20261023.jammydream17.chatgpt.site . The final deployment result in the chat confirms when this is live. Sign in with the same ChatGPT account that owns this preview. Hosting authentication protects delivery; it does not add cloud sync to the journal.
+- **Chosen: public GitHub Pages.** Open https://ertenan.github.io/form-iphone-preview/ . The source repository is https://github.com/Ertenan/form-iphone-preview . No account or ChatGPT sign-in is needed to open this test build.
+- **Previous preview:** the original Sites origin remains owner-private. It is a separate website origin; use export/restore if transferring a journal from there to GitHub Pages.
 - **Local Vite preview:** useful for desktop QA. `localhost` on an iPhone refers to the iPhone itself. A plain HTTP LAN URL is insufficient for service-worker/offline installation testing.
-- **Another host or tunnel:** no Vercel/Netlify/Wrangler/cloudflared/ngrok CLI or existing deployment configuration was found in this workspace. No additional provider account or tunnel is needed for the connected hosting path.
+- **No tunnel is required:** the public HTTPS deployment works independently of the development computer.
 
-The Sites URL is a real hosted publication used as a dedicated test environment. It remains owner-private. Source and static application assets are published; workouts remain in local IndexedDB on each device. No local browser journal or exported backup is uploaded to the host.
+The GitHub source and static application assets are public. Workouts remain in local IndexedDB on each device. No local browser journal or exported backup is uploaded to GitHub. This is a dedicated synthetic test environment, not a cloud backup service.
 
 ## Preview identity and synthetic data
 
-Build label: `iphone-core-2026-10-23.1`; Home Screen name: **Form Test**. The gold banner identifies the test environment.
+Build label: `iphone-core-2026-10-29.2`; Home Screen name: **Form Test**. The gold banner identifies the test environment.
 
-`npm run build:iphone-preview` builds this opt-in variant. `npm run build` still builds the ordinary empty-journal app. On first initialization only, the preview seeds:
+`npm run build:github-pages` builds this opt-in variant with the GitHub project path. `npm run build` still builds the ordinary empty-journal app. On first initialization only, the preview seeds:
 
 - `SAMPLE · Upper body`: two sets each of dumbbell bench press, assisted pull-up and weighted pull-up.
 - `SAMPLE · Previous session`: a fictional completed workout for previous-performance display.
@@ -24,10 +25,10 @@ These are test fixtures, not personal records or training prescriptions. Enter i
 
 ## 0. Install online
 
-1. Open the HTTPS link in **Safari**, not an embedded messaging browser. Sign in to the owning ChatGPT account if prompted. If it says access denied, report that before proceeding; do not change sharing or remove the private boundary.
+1. Open the GitHub Pages HTTPS link in **Safari**, not an embedded messaging browser. There should be no sign-in screen. Use the `/form-iphone-preview/` URL including the trailing slash.
 2. Confirm the gold test banner and `SAMPLE` routine. A new iPhone journal should contain exactly one sample template and one sample completed workout.
 3. Tap Safari's Share control (it may be under More), choose **Add to Home Screen**, leave **Open as Web App** enabled if that option appears, then tap **Add**. Name it **Form Test**.
-4. Launch **Form Test** from the Home Screen while online. Sign in again if requested. Go to **Profile**, and wait for **Offline app shell is ready on this browser**. If offline setup reports an error or never becomes ready, stop before airplane-mode testing and report the message.
+4. Launch **Form Test** from the Home Screen while online. Go to **Profile**, and wait for **Offline app shell is ready on this browser**. If offline setup reports an error or never becomes ready, stop before airplane-mode testing and report the message.
 5. Confirm all five tabs are usable and visible above the Home indicator. Check that opening the numeric keyboard does not hide the focused input or prevent reaching the completion control. Programs and Progress analytics should say unavailable.
 
 Apple references: [Home Screen installation](https://support.apple.com/guide/iphone/open-as-web-app-iphea86e5236/ios), [downloaded files](https://support.apple.com/102440).

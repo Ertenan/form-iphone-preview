@@ -3,7 +3,7 @@ import { stoppedRest } from './timers';
 
 declare const __IPHONE_PREVIEW__: boolean;
 export const IS_IPHONE_PREVIEW = __IPHONE_PREVIEW__;
-export const PREVIEW_BUILD = 'iphone-core-2026-10-23.1';
+export const PREVIEW_BUILD = 'iphone-core-2026-10-29.2';
 
 /** Fictional fixtures for the dedicated test build. Never replaces an existing journal. */
 export function createPreviewRecords(exercises: Exercise[], now = Date.now()) {
