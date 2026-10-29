@@ -13,10 +13,10 @@ Pushes to `main` run `.github/workflows/pages.yml`: install locked dependencies,
 ```sh
 npm ci
 npm run build:github-pages
-npm run preview
+npm run preview -- --mode github-preview
 ```
 
-Open the printed local URL with `/form-iphone-preview/` appended. The test variant lives under that path, including its service-worker scope, manifest and icons. If the repository is renamed, update the GitHub-specific base in `vite.config.ts` and the build checks.
+Open the printed local URL ending in `/form-iphone-preview/`. The test variant lives under that path, including its service-worker scope, manifest and icons. If the repository is renamed, update the GitHub-specific base in `vite.config.ts` and the build checks.
 
 ## Run
 

@@ -7,6 +7,10 @@
 - 29 existing domain/repository/fixture tests passed. Device checks remain pending.
 - Public source repository: https://github.com/Ertenan/form-iphone-preview . Target HTTPS site: https://ertenan.github.io/form-iphone-preview/ . The final handoff confirms the workflow/deployment outcome.
 - GitHub Actions publishes from `main` after tests and build checks. No cloud sync or advanced training features were added.
+- First hosted workflow run succeeded: https://github.com/Ertenan/form-iphone-preview/actions/runs/40964424436 (build, tests, output checks and deployment).
+- Public HTTPS root, manifest, service worker and Apple touch icon returned HTTP 200 without authentication. The browser loaded the synthetic journal directly with no login screen and reported offline readiness with no runtime errors.
+- In a browser on the public origin, logged 22.5 kg × 8 reps at 1.5 RIR, completed a set, paused rest, reloaded, resumed, and recovered all three inputs plus the paused timer.
+- A local production preview at the exact project path reloaded from its service-worker cache after the preview server was stopped. This remains desktop evidence; physical iPhone installation, lock/unlock and airplane-mode checks are pending.
 
 Earlier preview records below refer to the previous hosting origin and earlier builds.
 
